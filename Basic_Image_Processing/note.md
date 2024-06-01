@@ -24,10 +24,7 @@
 ```
 <br>
 
----
-<br>
-
-### Bit plane
+## Bit plane
 
 - grey image의 각 픽셀은 8bit로 구성
 
@@ -43,10 +40,7 @@
 
 <br>
 
----
-<br>
-
-### Histogram Equalization(stretching)
+## Histogram Equalization(stretching)
 
 - 이미지 밝기의 분포를 균일화
 
@@ -59,11 +53,7 @@
 
 <br>
 
----
-
-<br>
-
-### Noise
+## Noise
 
 <br>
 
@@ -101,3 +91,99 @@ a5 = fspecial('average', [5,5])
 tg3 = filter2(a3,t_ga)
 tg5 = filter2(a5,t_ga)
 ```
+
+<br>
+
+## Edges
+
+- 영상의 가장자리, 윤곽선을 다루는 분야
+
+1. step edge
+2. ramp edge
+3. line edge
+4. roof edge
+
+-> 엣지의 여러 형태들
+
+<br>
+
+```
+# Horizontal 특징 강화 필터
+1   1   1
+0   0   0
+-1 - 1  -1
+
+# vertical 특징 강화 필터
+1 0 -1
+1 0 -1
+1 0 -1
+```
+**filter** : Prewitt, Sobel, Roberts..
+
+<br>
+
+**Laplacian Filter**
+
+- 각 인덱스의 합이 0
+- 중앙 인덱스의 주파수가 확 튐
+
+-> 이미지의 검출 특성(edge) 증가
+-> 노이즈에 민감
+
+```
+-1 -1 -1
+-1 8  -1
+-1 -1 -1
+```
+
+<br>
+
+**Edge enhancement**
+
+- Unsharp masking
+- High boost filtering
+ 
+<br>
+
+**Unsharp masking process**
+
+Origin image : M, blurred origin image : N
+
+-> **M - k*N**
+
+<br>
+
+## Hough Transform
+
+- image에서 strongest line(원, 직선)을 찾는 변환 방법
+
+<br>
+
+**IDEA**
+
+- xy 평면의 y = ax + b 직선상의 점들을 ab평면으로 mapping
+- ab평면의 직선들의 교점을 구한 뒤 xy 평면의 직선(strongest line)을 구한다
+
+```
+1.
+(1,0) -> b = -a
+(1,1) -> b = -a + 1
+(2,1) -> b = -2a + 1
+(4,1) -> b = -4a + 1
+(3,2) -> b = -3a + 2
+
+2. 
+line들을 ab 평면에 투영 후 교점(a, b)찾기
+(a, b) = (1, 0), (1, -1)
+
+3. 
+strongest line
+y = x,
+y = x -1
+```
+
+
+
+
+
+
