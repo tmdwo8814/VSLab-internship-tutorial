@@ -181,7 +181,18 @@ strongest line
 y = x,
 y = x -1
 ```
+<br>
 
+## Morphology
+
+### Dilation : 팽창
+- object(전경)을 확장 시켜주는 개념
+- coordinates 이용
+- A + B
+
+### Erosion : 침식
+- object를 침식 시켜주는 개념 - thinned
+- A - B
 
 
 
