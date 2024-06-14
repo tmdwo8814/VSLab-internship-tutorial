@@ -195,6 +195,16 @@ y = x -1
 - A - B
 
 
+### Opening 
+- Erosion -> Dilation
+- (A - B) + B
+- 침식 후 팽창으로 객체의 크기 유지하면서 노이즈 감소 효과
+
+### Closing
+- Dilation -> Erosion
+- (A + B) - B
+- 팽창 후 침식으로 객체의 빈 부분 채워지는 효과
+
 
 
 
