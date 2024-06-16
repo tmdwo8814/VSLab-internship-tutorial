@@ -50,3 +50,14 @@
 - input이 음수인 경우 0반환 -> Dying ReLU
 
 -> Hidden layer에서 가장 많이 사용
+
+
+<br>
+
+## Activation Function - output layer
+
+**regression** -> identity function
+
+**binary classification** -> sigmoid
+
+**multi classification** -> softmax
