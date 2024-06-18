@@ -12,7 +12,7 @@
 
 <br>
 
-## Activation Function
+## Activation Function 
 
 - 은닉층을 활성화 하기 위한 함수
 - 비선형 함수 : 역전파 과정에서 미분값을 통해 학습 진행할 수 있게 함
@@ -61,3 +61,27 @@
 **binary classification** -> sigmoid
 
 **multi classification** -> softmax
+
+<br>
+
+## Gradient
+
+- 손실 함수의 값을 최소화하는 과정(학습)을 위해 미분 이용
+
+### IDEA
+
+- 손실 함수의 미분을 통해, + or - 방향으로 파라미터를 갱신할지 판단할 수 있음
+
+<br>
+
+<img src="./image/fx.png" width = "400">
+
+<br>
+
+**미분 값 : 음수 -> 양의 방향으로 이동**
+
+**미분 값 : 양수 -> 음의 방향으로 이동**
+
+-> global minimum(x=0.0)으로 이동, 학습하는 과정
+
+
