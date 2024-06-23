@@ -84,4 +84,50 @@
 
 -> global minimum(x=0.0)으로 이동, 학습하는 과정
 
+<br>
+
+## Optimizer
+
+**최소의 loss로 학습하는 방법을 찾는 최적화 알고리즘**
+
+-> loss function의 극솟값을 찾아내기 위한 logic들
+
+<br>
+
+### SGD & GD
+
+<img src="./image/sgd_gd.png" width = "400">
+
+<br>
+
+**GD** : 모든 데이터에 대하여 경사하강법 진행
+-> 속도 느림
+
+**SGD** : 랜덤으로 일부 데이터에 대해 경사하강법 진행 -> 속도 UP!
+
+<br>
+
+### Adam(Adaptive Moment Esimation)
+
+- momentum(관성)과 RMSProp(학습률조정)을 섞은 알고리즘
+- 대부분 학습에서 사용
+
+<br>
+
+### when train Transformer
+
+**Pre-training** : Adam
+
+**Fine-tuning** : SGD
+
+-> optimizer의 성질을 잘 표현한 구도
+
+<br>
+
+
+
+
+
+
+
 
