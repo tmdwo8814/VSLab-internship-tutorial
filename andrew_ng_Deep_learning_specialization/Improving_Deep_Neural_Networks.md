@@ -66,7 +66,7 @@
 ### when small dataset
 -> BGD
 
----
+<br>
 
 ## Momentum & RMSProp & Adam
 
@@ -91,7 +91,25 @@ $$
 
 - Momentum + RMSProp
 
+<br>
 
+## Batch Normalization
+
+**input normalization** -> 입력층의 x(input, data)를 평균을 0, 표준편차를 1로 만드는 것
+
+
+<br>
+
+**Batch Norm은 Input Norm과 달리 hidden layer에서 파라미터를 정규화 하는 것**
+
+<br>
+
+### 사용 효과
+- layer 간 covariate shift(입력 분포 변화) 완화 -> 뒷 hidden layer의 학습 용이
+- Regularization Effect(규제 효과 기대로 사용 x, 부가적인 효과임)-> drop out같은 효과
+
+### TIP
+- 활성함수 이전에 사용
 
 
 
